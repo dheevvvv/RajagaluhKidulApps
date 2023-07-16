@@ -8,16 +8,15 @@ import android.view.ViewGroup
 import com.raduldul.rajagaluhkidul.R
 
 
-class Welcome1Fragment : Fragment() {
-    var onNextButtonClick: (() -> Unit)? = null
+class Welcome3Fragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_welcome1, container, false)
+        return inflater.inflate(R.layout.fragment_welcome3, container, false)
     }
-
 
 }
