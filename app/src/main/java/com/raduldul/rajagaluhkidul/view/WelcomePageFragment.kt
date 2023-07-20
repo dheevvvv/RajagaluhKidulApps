@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
+import androidx.room.util.findColumnIndexBySuffix
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.raduldul.rajagaluhkidul.R
@@ -35,6 +37,9 @@ class WelcomePageFragment : Fragment() {
         val tabsLayout = binding.tabLayout
         viewPager.adapter = pagerAdapter
 
+        binding.btnNext.setOnClickListener {
+            findNavController().navigate(R.id.action_welcomePageFragment_to_loginFragment)
+        }
 
         TabLayoutMediator(tabsLayout, viewPager)
         { tab, position ->}.attach()

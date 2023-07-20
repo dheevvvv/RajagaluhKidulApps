@@ -51,6 +51,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_10"
             android:textColor="@android:color/white"
             android:layout_marginBottom="@dimen/margin_40"
             />

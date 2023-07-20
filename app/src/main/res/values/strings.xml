@@ -10,9 +10,18 @@
     <string name="intro_title_3">Wisata dan Budaya</string>
     <string name="intro_title_4">Literasi Keuangan</string>
     <string name="intro_sub_title_1">RajagaluhKidul Apps merupakan aplikasi mobile yang menyajikan berbagai informasi seputar produk-produk UMKM, Wisata, serta Budaya yang terdapat di wilayah Desa Rajagaluh Kidul</string>
-    <string name="intro_sub_title_2">Dengan berfokus pada pengembangan UMKM, disini Tersedia Produk-produk lokal UMKM Lengkap yang terdapat di Desa Rajagaluh Kidul seperti Opak, Gula Cakar, dan lainnya!</string>
-    <string name="intro_sub_title_3">Disini kita juga bisa menjelajahi wisata-wisata yang ada di Rajagaluh Kidul begitu pula lengkap dengan Budaya yang ada!</string>
-    <string name="intro_sub_title_4">Untuk mendukung inklusi ekonomi keuangan, disini kita juga bisa belajar mengenai literasi keuangan yang baik!</string>
+    <string name="intro_sub_title_2">Dengan berfokus pada pengembangan UMKM, disini kita bisa menjelajahi Produk-produk lokal UMKM Lengkap yang terdapat di Desa Rajagaluh Kidul seperti Opak, Gula Cakar, dan lainnya!</string>
+    <string name="intro_sub_title_3">Disini kita juga bisa menjelajahi wisata-wisata yang ada di Rajagaluh Kidul begitu pula lengkap dengan Pengetahuan Budaya yang ada!</string>
+    <string name="intro_sub_title_4">Untuk mendukung inklusi ekonomi keuangan, disini kita juga dapat belajar mengenai literasi keuangan yang baik!</string>
     <string name="skip">SKIP</string>
     <string name="lanjutkan">Next</string>
+    <string name="masuk">Masuk</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="atau">atau</string>
+    <string name="buat_akun_baru">Buat Akun Baru</string>
+    <string name="daftar">Daftar</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sudah_punya_akun_masuk">Sudah Punya Akun ? Masuk</string>
 </resources>
