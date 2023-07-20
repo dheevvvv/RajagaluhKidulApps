@@ -5,11 +5,14 @@
     <string name="next">Next</string>
 
     <!--Into Fragment values-->
-    <string name="intro_title_1">Intro Title 1</string>
-    <string name="intro_title_2">Intro Title 2</string>
-    <string name="intro_title_3">Intro Title 3</string>
-    <string name="intro_sub_title_1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </string>
-    <string name="intro_sub_title_2">Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
-    <string name="intro_sub_title_3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</string>
+    <string name="intro_title_1">Selamat Datang!</string>
+    <string name="intro_title_2">UMKM</string>
+    <string name="intro_title_3">Wisata dan Budaya</string>
+    <string name="intro_title_4">Literasi Keuangan</string>
+    <string name="intro_sub_title_1">RajagaluhKidul Apps merupakan aplikasi mobile yang menyajikan berbagai informasi seputar produk-produk UMKM, Wisata, serta Budaya yang terdapat di wilayah Desa Rajagaluh Kidul</string>
+    <string name="intro_sub_title_2">Dengan berfokus pada pengembangan UMKM, disini Tersedia Produk-produk lokal UMKM Lengkap yang terdapat di Desa Rajagaluh Kidul seperti Opak, Gula Cakar, dan lainnya!</string>
+    <string name="intro_sub_title_3">Disini kita juga bisa menjelajahi wisata-wisata yang ada di Rajagaluh Kidul begitu pula lengkap dengan Budaya yang ada!</string>
+    <string name="intro_sub_title_4">Untuk mendukung inklusi ekonomi keuangan, disini kita juga bisa belajar mengenai literasi keuangan yang baik!</string>
     <string name="skip">SKIP</string>
+    <string name="lanjutkan">Next</string>
 </resources>

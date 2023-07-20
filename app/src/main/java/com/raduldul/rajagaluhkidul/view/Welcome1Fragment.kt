@@ -27,23 +27,40 @@ class Welcome1Fragment : Fragment() {
         arguments?.takeIf { it.containsKey(INTRO_STRING_OBJECT) }?.apply {
             binding.viewPagerHeader.text = getStringArray(INTRO_STRING_OBJECT)!![0]
             binding.viewPagerSubText.text = getStringArray(INTRO_STRING_OBJECT)!![1]
-            changeColor(getStringArray(INTRO_STRING_OBJECT)!![2])
+            change(getStringArray(INTRO_STRING_OBJECT)!![2])
         }
 
         binding.skipText.setOnClickListener {
-            //Handle Skip Click event
+            
         }
     }
 
-    fun changeColor(color:String){
+    fun change(color:String){
         when(color)
         {
-            "R" ->
+            "R" -> {
+                binding.baseLinear.setBackgroundColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.earth_01
+                    )
+                )
+                binding.ivWelcome.setImageResource(R.drawable.bro)
+            }
+            "G" -> {
                 binding.baseLinear.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
-            "B" ->
+                binding.ivWelcome.setImageResource(R.drawable.bromarket)
+            }
+
+            "B" -> {
                 binding.baseLinear.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
-            "G" ->
+                binding.ivWelcome.setImageResource(R.drawable.wisatabudaya)
+            }
+
+            "D" -> {
                 binding.baseLinear.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
+                binding.ivWelcome.setImageResource(R.drawable.financial)
+            }
         }
     }
 

@@ -16,7 +16,7 @@ import com.raduldul.rajagaluhkidul.view.adapter.WelcomePageAdapter
 
 class WelcomePageFragment : Fragment() {
     private lateinit var binding: FragmentWelcomePageBinding
-    private val mPageNumbers = 3
+    private val mPageNumbers = 4
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,10 +35,22 @@ class WelcomePageFragment : Fragment() {
         val tabsLayout = binding.tabLayout
         viewPager.adapter = pagerAdapter
 
+
         TabLayoutMediator(tabsLayout, viewPager)
         { tab, position ->}.attach()
 
         tabsLayout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == pagerAdapter.itemCount - 1) {
+                    binding.btnNext.visibility = View.VISIBLE
+                } else {
+                    binding.btnNext.visibility = View.GONE
+                }
+            }
+        })
     }
 
     fun getListOfPagerContents(): List<Array<String>> {
@@ -46,7 +58,8 @@ class WelcomePageFragment : Fragment() {
         val ar1 = arrayOf(getString(R.string.intro_title_1), getString(R.string.intro_sub_title_1),"R" )
         val ar2 = arrayOf(getString(R.string.intro_title_2), getString(R.string.intro_sub_title_2) ,"G")
         val ar3 = arrayOf(getString(R.string.intro_title_3), getString(R.string.intro_sub_title_3) ,"B")
-        return listOf(ar1,ar2,ar3)
+        val ar4 = arrayOf(getString(R.string.intro_title_4), getString(R.string.intro_sub_title_4) ,"D")
+        return listOf(ar1,ar2,ar3, ar4)
     }
 
 }
