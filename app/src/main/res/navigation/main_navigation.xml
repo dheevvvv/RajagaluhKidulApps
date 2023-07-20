@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/welcome1Fragment">
+    app:startDestination="@id/welcomePageFragment">
 
     <fragment
         android:id="@+id/welcome1Fragment"
         android:name="com.raduldul.rajagaluhkidul.view.Welcome1Fragment"
         android:label="fragment_welcome1"
         tools:layout="@layout/fragment_welcome1" />
+    <fragment
+        android:id="@+id/welcomePageFragment"
+        android:name="com.raduldul.rajagaluhkidul.view.WelcomePageFragment"
+        android:label="fragment_welcome_page"
+        tools:layout="@layout/fragment_welcome_page" />
 </navigation>

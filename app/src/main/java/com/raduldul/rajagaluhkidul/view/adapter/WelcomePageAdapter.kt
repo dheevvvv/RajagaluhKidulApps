@@ -1,39 +1,38 @@
 package com.raduldul.rajagaluhkidul.view.adapter
 
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.raduldul.rajagaluhkidul.view.Welcome1Fragment
-import com.raduldul.rajagaluhkidul.view.Welcome2Fragment
-import com.raduldul.rajagaluhkidul.view.Welcome3Fragment
-import com.raduldul.rajagaluhkidul.view.Welcome4Fragment
+import com.raduldul.rajagaluhkidul.view.*
 
-class WelcomePageAdapter(fragmentActivity: FragmentActivity, private val viewPager: ViewPager2) :
-    FragmentStateAdapter(fragmentActivity) {
 
-    private val fragments = listOf(
-        Welcome1Fragment(),
-        Welcome2Fragment(),
-        Welcome3Fragment(),
-        Welcome4Fragment()
+class WelcomePageAdapter(fragment: Fragment, val listOfPagerContents: List<Array<String>>, val mPageNumbers :Int) :
+    FragmentStateAdapter(fragment) {
 
-    )
 
     override fun getItemCount(): Int {
-        return fragments.size
+        return mPageNumbers
     }
 
     @Suppress("UNREACHABLE_CODE")
     override fun createFragment(position: Int): Fragment {
-        val fragment = fragments[position]
-        if (fragment is Welcome1Fragment) {
-            fragment.onNextButtonClick = {
-                val nextPosition = viewPager.currentItem + 1
-                if (nextPosition < fragments.size) {
-                    viewPager.setCurrentItem(nextPosition, true)
+        val fragment = Welcome1Fragment()
+
+        when(position){
+            0 ->
+                fragment.arguments = Bundle().apply {
+                    putStringArray(INTRO_STRING_OBJECT, listOfPagerContents[0])
                 }
-            }
+            1 ->
+                fragment.arguments = Bundle().apply {
+                    putStringArray(INTRO_STRING_OBJECT, listOfPagerContents[1])
+                }
+            2 ->
+                fragment.arguments = Bundle().apply {
+                    putStringArray(INTRO_STRING_OBJECT, listOfPagerContents[2])
+                }
         }
         return fragment
     }
