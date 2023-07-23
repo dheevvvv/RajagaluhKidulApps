@@ -24,4 +24,8 @@
     <string name="username">Username</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sudah_punya_akun_masuk">Sudah Punya Akun ? Masuk</string>
+    <string name="home">Home</string>
+    <string name="berita">Berita</string>
+    <string name="favourite">Favourite</string>
+    <string name="account">Account</string>
 </resources>
