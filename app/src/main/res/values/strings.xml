@@ -28,4 +28,8 @@
     <string name="berita">Berita</string>
     <string name="favourite">Favourite</string>
     <string name="account">Account</string>
+    <string name="change_profile">Change Profile</string>
+    <string name="account_setting">Account Setting</string>
+    <string name="logout">Logout</string>
+    <string name="version_1_1_0">Version 1.1.0</string>
 </resources>
