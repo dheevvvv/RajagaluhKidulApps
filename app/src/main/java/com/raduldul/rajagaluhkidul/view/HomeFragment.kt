@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.raduldul.rajagaluhkidul.R
 import com.raduldul.rajagaluhkidul.databinding.FragmentHomeBinding
 
@@ -28,7 +29,7 @@ class HomeFragment : Fragment() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item->
             when(item.itemId) {
                 R.id.account -> {
-                    //
+                    findNavController().navigate(R.id.action_homeFragment_to_accountFragment)
                     true
                 } else -> false
             }
