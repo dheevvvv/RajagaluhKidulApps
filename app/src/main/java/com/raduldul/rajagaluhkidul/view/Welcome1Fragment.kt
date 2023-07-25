@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.raduldul.rajagaluhkidul.R
 import com.raduldul.rajagaluhkidul.databinding.FragmentWelcome1Binding
 
@@ -31,7 +32,7 @@ class Welcome1Fragment : Fragment() {
         }
 
         binding.skipText.setOnClickListener {
-            
+            findNavController().navigate(R.id.action_welcomePageFragment_to_loginFragment)
         }
     }
 
