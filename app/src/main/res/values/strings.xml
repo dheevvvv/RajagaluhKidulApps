@@ -33,4 +33,6 @@
     <string name="logout">Logout</string>
     <string name="version_1_1_0">Version 1.1.0</string>
     <string name="search">Search</string>
+    <string name="pencarian">Pencarian</string>
+    <string name="umkm">UMKM</string>
 </resources>

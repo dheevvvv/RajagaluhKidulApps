@@ -44,7 +44,7 @@ class WelcomePageFragment : Fragment() {
         TabLayoutMediator(tabsLayout, viewPager)
         { tab, position ->}.attach()
 
-        tabsLayout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
+        tabsLayout.setBackgroundColor(ContextCompat.getColor(requireContext(), com.google.android.material.R.color.mtrl_btn_transparent_bg_color))
 
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {

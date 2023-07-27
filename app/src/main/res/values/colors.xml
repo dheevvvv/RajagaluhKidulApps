@@ -12,4 +12,14 @@
     <color name="earth_02">#40513B</color>
     <color name="earth_03">#609966</color>
     <color name="earth_04">#EDF1D6</color>
+    <color name="vivid_sky_blue">#40C9FF</color>
+    <color name="argentinian_blue">#53B6FF</color>
+    <color name="ruddy_blue">#65A3FF</color>
+    <color name="cornflower_blue">#788FFF</color>
+    <color name="tropical_indigo">#8B7CFF</color>
+    <color name="medium_siate_blue">#9D69FF</color>
+    <color name="electric_purple">#B056FF</color>
+    <color name="phiox">#C342FF</color>
+    <color name="phlox">#D52FFF</color>
+    <color name="phliox">#E81CFF</color>
 </resources>

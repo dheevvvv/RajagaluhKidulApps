@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
 
         userViewModel.getUsername()
         userViewModel.username.observe(viewLifecycleOwner){
-            binding.tvHome.text = "Hello Welcome," + "  " + it + "!"
+            binding.tvHome.text = "Welcome," + "  " + it + "!"
         }
     }
 

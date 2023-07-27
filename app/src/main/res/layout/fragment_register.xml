@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/background_satu"
     android:padding="20dp"
     android:layout_height="match_parent"
     tools:context=".view.RegisterFragment">
@@ -127,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/earth_03"
+        android:backgroundTint="@color/electric_purple"
         android:text="@string/daftar"
         app:cornerRadius="@dimen/margin_25"
         android:textColor="@color/white"

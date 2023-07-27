@@ -40,26 +40,22 @@ class Welcome1Fragment : Fragment() {
         when(color)
         {
             "R" -> {
-                binding.baseLinear.setBackgroundColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.earth_01
-                    )
-                )
+                binding.baseLinear.setBackgroundResource(R.drawable.background_dua)
                 binding.ivWelcome.setImageResource(R.drawable.bro)
             }
             "G" -> {
-                binding.baseLinear.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
+                binding.baseLinear.setBackgroundResource(R.drawable.background_dua)
                 binding.ivWelcome.setImageResource(R.drawable.bromarket)
             }
 
             "B" -> {
-                binding.baseLinear.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
+//                binding.baseLinear.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
+                binding.baseLinear.setBackgroundResource(R.drawable.background_dua)
                 binding.ivWelcome.setImageResource(R.drawable.wisatabudaya)
             }
 
             "D" -> {
-                binding.baseLinear.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.earth_01))
+                binding.baseLinear.setBackgroundResource(R.drawable.background_dua)
                 binding.ivWelcome.setImageResource(R.drawable.financial)
             }
         }
