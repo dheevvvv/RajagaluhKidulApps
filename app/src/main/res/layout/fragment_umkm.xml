@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_satu"
-    tools:context=".view.HomeFragment">
+    tools:context=".view.UmkmFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -76,11 +76,11 @@
 
         <ImageView
             android:id="@+id/iv_umkm"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginEnd="60dp"
             android:layout_marginStart="@dimen/margin_20"
-            android:src="@drawable/icon_umkm"
+            android:src="@drawable/food_icon"
             />
         <ImageView
             android:id="@+id/iv_wisatabudaya"
@@ -110,7 +110,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/umkm"
+            android:text="Produk Makanan"
             android:textStyle="bold"
             android:fontFamily="@font/poppins_medium"
             android:textColor="@color/earth_02"
@@ -137,20 +137,16 @@
 
     </LinearLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nsv_home"
+    <ScrollView
         app:layout_constraintTop_toBottomOf="@+id/ll_menutext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="290dp"
-        android:padding="@dimen/margin_20"
         android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="290dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -189,13 +185,13 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_top_rated_wisata"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/tv_header_popular_wisata"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 />
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 
 
 
