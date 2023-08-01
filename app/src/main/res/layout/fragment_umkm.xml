@@ -63,135 +63,107 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-
-    <LinearLayout
-        android:id="@+id/ll_menu"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:padding="@dimen/margin_10"
-        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_height="100dp"
+        app:cardElevation="50dp"
+        app:cardCornerRadius="@dimen/margin_20"
         app:layout_constraintTop_toBottomOf="@+id/cv_search"
-        android:orientation="horizontal"
         >
-
-        <ImageView
-            android:id="@+id/iv_umkm"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginStart="@dimen/margin_20"
-            android:src="@drawable/food_icon"
-            />
-        <ImageView
-            android:id="@+id/iv_wisatabudaya"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="60dp"
-            android:src="@drawable/icon_budaya"
-            />
-        <ImageView
-            android:id="@+id/iv_keuangan"
-            android:layout_marginTop="@dimen/margin_10"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="@dimen/margin_20"
-            android:src="@drawable/icon_keuangan"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_menutext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ll_menu"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Produk Makanan"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins_medium"
-            android:textColor="@color/earth_02"
-            android:layout_marginStart="45dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Wisata dan Budaya"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins_medium"
-            android:textColor="@color/earth_02"
-            android:layout_marginStart="50dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Keuangan"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppins_medium"
-            android:textColor="@color/earth_02"
-            android:layout_marginStart="30dp"
-            />
-
-    </LinearLayout>
-
-    <ScrollView
-        app:layout_constraintTop_toBottomOf="@+id/ll_menutext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tv_header_popular_umkm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/ll_menutext"
-                app:layout_constraintStart_toStartOf="parent"
-                android:text="Poppular UMKM"
-                android:layout_marginStart="@dimen/margin_20"
-                android:textSize="16sp"
-                android:layout_marginTop="@dimen/margin_20"
-                android:fontFamily="@font/poppins_bold"
-                />
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_popular_umkm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_header_popular_umkm"
+                android:text="REKAP UMKM"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_medium"
                 />
 
-            <TextView
-                android:id="@+id/tv_header_popular_wisata"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/rv_popular_umkm"
-                app:layout_constraintStart_toStartOf="parent"
-                android:text="Top Rated Destinasi Wisata"
-                android:layout_marginStart="@dimen/margin_20"
-                android:textSize="16sp"
-                android:layout_marginTop="@dimen/margin_20"
-                android:fontFamily="@font/poppins_bold"
-                />
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_top_rated_wisata"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_header_popular_wisata"
+            <LinearLayout
                 android:orientation="horizontal"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/count_jumlah_umkm"
+                    android:layout_width="wrap_content"
+                    android:text="20"
+                    android:textSize="24sp"
+                    android:layout_marginStart="80dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_height="70dp"
+                    android:background="@color/earth_02"/>
+
+                <TextView
+                    android:id="@+id/count_jumlah_produk"
+                    android:layout_width="wrap_content"
+                    android:text="20"
+                    android:textSize="24sp"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="1dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_height="70dp"
+                    android:background="@color/earth_02"/>
+
+                <TextView
+                    android:id="@+id/count_jumlah_jenisusaha"
+                    android:layout_width="wrap_content"
+                    android:text="20"
+                    android:textSize="24sp"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="UMKM"
+                    android:layout_marginStart="70dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Produk"
+                    android:layout_marginStart="65dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Jenis Usaha"
+                    android:layout_marginStart="50dp"
+                    />
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
-    </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
 

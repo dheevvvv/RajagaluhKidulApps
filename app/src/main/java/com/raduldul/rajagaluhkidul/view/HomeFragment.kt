@@ -53,6 +53,10 @@ class HomeFragment : Fragment() {
             }
         }
 
+        binding.ivUmkm.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_umkmFragment)
+        }
+
         userViewModel.getUsername()
         userViewModel.username.observe(viewLifecycleOwner){
             binding.tvHome.text = "Welcome," + "  " + it + "!"
@@ -67,8 +71,6 @@ class HomeFragment : Fragment() {
 
         setupRecyclerView()
         observeRecyclerView()
-
-
     }
 
     private fun setupRecyclerView(){
@@ -95,6 +97,5 @@ class HomeFragment : Fragment() {
         val bundle = bundleOf("listData" to listData)
         view?.findNavController()?.navigate(R.id.homeFragment, bundle)
     }
-
 
 }

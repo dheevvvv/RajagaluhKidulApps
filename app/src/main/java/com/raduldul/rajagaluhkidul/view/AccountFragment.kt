@@ -40,6 +40,15 @@ class AccountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         userManager = UserManager.getInstance(requireContext())
 
+        binding.bottomNavigation.setOnNavigationItemSelectedListener { item->
+            when(item.itemId) {
+                R.id.home -> {
+                    findNavController().navigate(R.id.action_accountFragment_to_homeFragment)
+                    true
+                } else -> false
+            }
+        }
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
