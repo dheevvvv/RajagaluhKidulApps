@@ -1,5 +1,6 @@
 package com.raduldul.rajagaluhkidul.view
 
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -27,14 +28,33 @@ class UmkmFragment : Fragment() {
         binding = FragmentUmkmBinding.inflate(layoutInflater, container, false)
         return binding.root
 
-        startCountUpUmkm()
-        startCountUpProduk()
-        startCountUpJenisUsaha()
-
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val umkmCount = binding.countJumlahUmkm
+        val produkCount = binding.countJumlahProduk
+        val jenisUsahaCount = binding.countJumlahJenisusaha
+        startCountUpAnimation(umkmCount, jumlahUmkm)
+        startCountUpAnimation(produkCount, jumlahProduk)
+        startCountUpAnimation(jenisUsahaCount, jumlahJenisUsaha)
+//        startCountUpUmkm()
+//        startCountUpProduk()
+//        startCountUpJenisUsaha()
+    }
+    private fun startCountUpAnimation(textView: TextView, targetValue: Int) {
+        val valueAnimator = ValueAnimator.ofInt(0, targetValue)
+        valueAnimator.duration = 5000 // Adjust this value to control the animation speed (milliseconds)
+
+        valueAnimator.addUpdateListener {
+            val animatedValue = it.animatedValue as Int
+            textView.text = animatedValue.toString()
+        }
+
+        valueAnimator.start()
+    }
     private fun startCountUpUmkm() {
-        object : CountDownTimer(((jumlahUmkm + 1) * 1000).toLong(), 1000) {
+        object : CountDownTimer(((jumlahUmkm + 1) * 100).toLong(), 100) {
             override fun onTick(millisUntilFinished: Long) {
                 currentUmkm++
                 val textViewCount = binding.countJumlahUmkm
@@ -48,7 +68,7 @@ class UmkmFragment : Fragment() {
     }
 
     private fun startCountUpProduk() {
-        object : CountDownTimer(((jumlahProduk + 1) * 1000).toLong(), 1000) {
+        object : CountDownTimer(((jumlahProduk + 1) * 50).toLong(), 50) {
             override fun onTick(millisUntilFinished: Long) {
                 currentProduk++
                 val countTextView2 = binding.countJumlahProduk
