@@ -6,6 +6,7 @@
     app:strokeColor="@color/earth_02"
     android:id="@+id/onClickDetail"
     android:layout_marginEnd="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_20"
     app:cardCornerRadius="@dimen/margin_20"
     android:layout_height="210dp">
 

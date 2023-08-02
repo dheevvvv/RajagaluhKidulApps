@@ -35,4 +35,7 @@
     <string name="search">Search</string>
     <string name="pencarian">Pencarian</string>
     <string name="umkm">UMKM</string>
+    <string name="location">Location</string>
+    <string name="spesialisasi">Spesialisasi</string>
+    <string name="pesan">Pesan</string>
 </resources>

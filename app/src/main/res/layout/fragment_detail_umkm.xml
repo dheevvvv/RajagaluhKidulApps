@@ -31,30 +31,215 @@
                     />
             </com.google.android.material.card.MaterialCardView>
 
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:id="@+id/cv_profileumkm"
+                app:layout_constraintTop_toBottomOf="@+id/cv_image"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                app:cardElevation="@dimen/margin_10"
+                app:cardCornerRadius="@dimen/margin_20"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_20">
+
+                    <TextView
+                        android:id="@+id/tv_nama_umkm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/cv_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Nama UMKM"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="18sp"
+                        />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:src="@drawable/ic_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/rate"
+                            android:text="8.3"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/earth_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginStart="15dp"
+                            android:id="@+id/jarak"
+                            android:textColor="@color/earth_02"
+                            android:text="Ratings and Reviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:src="@drawable/baseline_location_on_24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tv_alamat"
+                            android:text="@string/location"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/earth_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginStart="15dp"
+                            android:id="@+id/tv_lokasidetail"
+                            android:textColor="@color/earth_02"
+                            android:text="Rajagaluh Kidul, Majalengka, Jawa Barat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/margin_10"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:src="@drawable/baseline_local_grocery_store_24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tv_spesialisasi_txt"
+                            android:text="@string/spesialisasi"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="16sp"
+                            android:textColor="@color/earth_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginStart="15dp"
+                            android:id="@+id/tv_spesialisasi"
+                            android:textColor="@color/earth_02"
+                            android:text="Rengginang mentah dan matang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
             <TextView
-                android:id="@+id/tv_nama_umkm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/cv_image"
+                app:layout_constraintTop_toBottomOf="@+id/cv_profileumkm"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="Nama UMKM"
                 android:layout_marginStart="@dimen/margin_20"
                 android:layout_marginTop="@dimen/margin_20"
                 android:fontFamily="@font/poppins_bold"
+                android:text="Produk"
+                android:id="@+id/tv_produk"
                 android:textSize="18sp"
                 />
 
-            <androidx.recyclerview.widget.RecyclerView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nama_umkm"
+                android:layout_height="130dp"
+                android:id="@+id/cv_produk"
+                app:layout_constraintTop_toBottomOf="@+id/tv_produk"
                 android:layout_marginStart="@dimen/margin_10"
                 android:layout_marginEnd="@dimen/margin_10"
-                android:id="@+id/rv_produk"
+                app:cardCornerRadius="@dimen/margin_20"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_img_produk"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/testtstoreposter"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/margin_10">
+
+                        <TextView
+                            android:id="@+id/tv_nama_produk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Rengginang mentah dan matang"
+                            />
+                        <TextView
+                            android:id="@+id/tv_harga_produk"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Rp.230"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
                 android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:backgroundTint="@color/electric_purple"
+                android:text="@string/pesan"
+                app:layout_constraintTop_toBottomOf="@+id/cv_produk"
                 />
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
