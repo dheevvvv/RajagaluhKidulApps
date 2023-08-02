@@ -201,6 +201,8 @@
                 android:id="@+id/rv_umkm_makanan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
                 app:layout_constraintTop_toBottomOf="@+id/tv_makanan"
                 android:layout_marginTop="@dimen/margin_10"
                 />
@@ -233,6 +235,8 @@
                 android:id="@+id/rv_umkm_kerajinan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
                 app:layout_constraintTop_toBottomOf="@+id/tv_kerajinan"
                 android:layout_marginTop="@dimen/margin_10"
                 />

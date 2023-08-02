@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/ll_menutext"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="Poppular UMKM"
+                android:text="Popular UMKM"
                 android:layout_marginStart="@dimen/margin_20"
                 android:textSize="16sp"
                 android:layout_marginTop="@dimen/margin_20"
