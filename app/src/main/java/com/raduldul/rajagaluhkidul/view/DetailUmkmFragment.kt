@@ -33,6 +33,7 @@ class DetailUmkmFragment : Fragment() {
         val dataUmkm = requireArguments().getParcelable<DataUmkm>("listData")
         dataUmkm.let {
             binding.ivImgUmkm.setImageResource(it!!.imageResUmkm)
+            binding.ivImgProduk.setImageResource(it.imageResProdukUmkm)
             binding.tvNamaUmkm.text = it.namaUmkm
             binding.rate.text = it.ratingUmkm.toString()
             binding.tvLokasidetail.text = it.alamat
