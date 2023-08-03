@@ -55,6 +55,6 @@ class HomeAdapter(private val onItemClick: (DataPopularUmkm) -> Unit): RecyclerV
     private fun navigateToDetailFragment(view: View, listData: DataPopularUmkm) {
         val bundle = Bundle()
         bundle.putParcelable("listData", listData)
-        view.findNavController().navigate(R.id.homeFragment, bundle)
+        view.findNavController().navigate(R.id.umkmFragment, bundle)
     }
 }

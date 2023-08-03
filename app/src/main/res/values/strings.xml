@@ -38,4 +38,5 @@
     <string name="location">Location</string>
     <string name="spesialisasi">Spesialisasi</string>
     <string name="pesan">Pesan</string>
+    <string name="owner">Owner</string>
 </resources>

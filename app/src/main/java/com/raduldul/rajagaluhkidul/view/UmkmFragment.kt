@@ -89,7 +89,7 @@ class UmkmFragment : Fragment() {
 
     private fun navigateToDetailDestination(listData: DataUmkm) {
         val bundle = bundleOf("listData" to listData)
-        view?.findNavController()?.navigate(R.id.homeFragment, bundle)
+        view?.findNavController()?.navigate(R.id.detailUmkmFragment, bundle)
     }
 
     private fun startCountUpAnimation(textView: TextView, targetValue: Int) {

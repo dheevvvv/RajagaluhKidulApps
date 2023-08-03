@@ -56,6 +56,6 @@ class UmkmAdapter(private val onItemClick: (DataUmkm) -> Unit): RecyclerView.Ada
     private fun navigateToDetailFragment(view: View, listData: DataUmkm) {
         val bundle = Bundle()
         bundle.putParcelable("listData", listData)
-        view.findNavController().navigate(R.id.homeFragment, bundle)
+        view.findNavController().navigate(R.id.detailUmkmFragment, bundle)
     }
 }

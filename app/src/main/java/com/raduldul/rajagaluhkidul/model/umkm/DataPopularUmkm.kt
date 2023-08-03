@@ -9,6 +9,13 @@ data class DataPopularUmkm(
     val namaUmkm: String,
     val kategoriUmkm: String,
     val imageResUmkm: Int,
+    val imageResProdukUmkm: Int,
     val ratingUmkm: Double,
     val jarakUmkm: Double,
+    val spesialisasiUmkm: String,
+    val namaProduk:String,
+    val kontakTelepon:String,
+    val alamat:String,
+    val harga:Int,
+    val namaPemilik:String
 ):Parcelable

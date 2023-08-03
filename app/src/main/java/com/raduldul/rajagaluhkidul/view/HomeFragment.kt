@@ -91,11 +91,11 @@ class HomeFragment : Fragment() {
 
     private fun navigateToDetailDestination(listData: DataPopularUmkm) {
         val bundle = bundleOf("listData" to listData)
-        view?.findNavController()?.navigate(R.id.homeFragment, bundle)
+        view?.findNavController()?.navigate(R.id.umkmFragment, bundle)
     }
     private fun navigateToDetailDestinationTopWisata(listData: DataTopRatedWisata) {
         val bundle = bundleOf("listData" to listData)
-        view?.findNavController()?.navigate(R.id.homeFragment, bundle)
+        view?.findNavController()?.navigate(R.id.umkmFragment, bundle)
     }
 
 }

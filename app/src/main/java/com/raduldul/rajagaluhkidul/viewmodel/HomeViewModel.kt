@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.raduldul.rajagaluhkidul.R
 import com.raduldul.rajagaluhkidul.model.umkm.DataPopularUmkm
+import com.raduldul.rajagaluhkidul.model.umkm.DataUmkm
 import com.raduldul.rajagaluhkidul.model.wisatadanbudaya.DataTopRatedWisata
 
 
@@ -23,12 +24,10 @@ class HomeViewModel:ViewModel() {
 
     private fun loadListPopularUmkm(){
         val data = listOf(
-            DataPopularUmkm(1, "Tsamie", "Makanan", R.drawable.tsamie, 8.6, 0.5,),
-            DataPopularUmkm(2, "Jalakotek", "Makanan", R.drawable.jalakotek, 7.6, 0.1,),
-            DataPopularUmkm(3, "Tsamie", "Makanan", R.drawable.tsamie, 8.6, 0.5,),
-            DataPopularUmkm(4, "Tsamie", "Makanan", R.drawable.tsamie, 8.6, 0.5,),
-            DataPopularUmkm(5, "Tsamie", "Makanan", R.drawable.tsamie, 8.6, 0.5,),
-            DataPopularUmkm(6, "Tsamie", "Makanan", R.drawable.tsamie, 8.6, 0.5,)
+            DataPopularUmkm(1, "Tsamie", "Makanan", R.drawable.tsamie, R.drawable.tsamie , 8.6 , 0.5, "Ramen", "Curry Ramen", "085224455766", "Rajagaluh Kidul, Majalengka, Jawa Barat", 25000, "Dendi, Diki, Agung"),
+            DataPopularUmkm(2, "Tsamie", "Makanan", R.drawable.tsamie, R.drawable.tsamie , 8.6 , 0.5, "Ramen", "Curry Ramen", "085224455766", "Rajagaluh Kidul, Majalengka, Jawa Barat", 25000, "Dendi, Diki, Agung"),
+            DataPopularUmkm(3, "Tsamie", "Makanan", R.drawable.tsamie, R.drawable.tsamie , 8.6 , 0.5, "Ramen", "Curry Ramen", "085224455766", "Rajagaluh Kidul, Majalengka, Jawa Barat", 25000, "Dendi, Diki, Agung"),
+            DataPopularUmkm(4, "Tsamie", "Makanan", R.drawable.tsamie, R.drawable.tsamie , 8.6 , 0.5, "Ramen", "Curry Ramen", "085224455766", "Rajagaluh Kidul, Majalengka, Jawa Barat", 25000, "Dendi, Diki, Agung"),
         )
         _listPopularUmkm.postValue(data)
     }

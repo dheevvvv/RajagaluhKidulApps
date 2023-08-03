@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_homeFragment_to_umkmFragment"
             app:destination="@id/umkmFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailUmkmFragment"
+            app:destination="@id/detailUmkmFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -94,5 +97,17 @@
         <action
             android:id="@+id/action_umkmFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_umkmFragment_to_detailUmkmFragment"
+            app:destination="@id/detailUmkmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailUmkmFragment"
+        android:name="com.raduldul.rajagaluhkidul.view.DetailUmkmFragment"
+        android:label="fragment_detail_umkm"
+        tools:layout="@layout/fragment_detail_umkm" >
+        <action
+            android:id="@+id/action_detailUmkmFragment_to_umkmFragment"
+            app:destination="@id/umkmFragment" />
     </fragment>
 </navigation>
