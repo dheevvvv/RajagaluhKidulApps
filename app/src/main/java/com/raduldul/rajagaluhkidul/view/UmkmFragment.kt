@@ -32,7 +32,8 @@ class UmkmFragment : Fragment() {
     private val jumlahJenisUsaha = 2
     private var currentJenisUsaha = 0
     private val umkmViewModel: UmkmViewModel by activityViewModels()
-    private lateinit var umkmAdapter: UmkmAdapter
+    private lateinit var umkmAdapterMakanan: UmkmAdapter
+    private lateinit var umkmAdapterKerajinan: UmkmAdapter
 
     @Suppress("UNREACHABLE_CODE")
     override fun onCreateView(
@@ -57,7 +58,10 @@ class UmkmFragment : Fragment() {
 //        startCountUpProduk()
 //        startCountUpJenisUsaha()
 
-        umkmAdapter = UmkmAdapter{
+        umkmAdapterMakanan = UmkmAdapter{
+            navigateToDetailDestination(it)
+        }
+        umkmAdapterKerajinan = UmkmAdapter{
             navigateToDetailDestination(it)
         }
         setupRecyclerView()
@@ -69,13 +73,17 @@ class UmkmFragment : Fragment() {
 
     private fun setupRecyclerView(){
         binding.rvUmkmMakanan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        binding.rvUmkmMakanan.adapter = umkmAdapter
-
+        binding.rvUmkmMakanan.adapter = umkmAdapterMakanan
+        binding.rvUmkmKerajinan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.rvUmkmKerajinan.adapter = umkmAdapterKerajinan
     }
 
     private fun observeRecyclerView() {
-        umkmViewModel.listUmkm.observe(viewLifecycleOwner) {
-            umkmAdapter.setData(it)
+        umkmViewModel.listUmkmMakanan.observe(viewLifecycleOwner) {
+            umkmAdapterMakanan.setData(it)
+        }
+        umkmViewModel.listUmkmkerajinan.observe(viewLifecycleOwner) {
+            umkmAdapterKerajinan.setData(it)
         }
     }
 
