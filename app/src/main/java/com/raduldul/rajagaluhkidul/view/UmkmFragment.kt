@@ -67,11 +67,38 @@ class UmkmFragment : Fragment() {
         setupRecyclerView()
         observeRecyclerView()
 
+        var isGridLayout = false
 
 
     }
 
     private fun setupRecyclerView(){
+        var isGridLayout = false
+
+        binding.tvMakananLihatsemua.setOnClickListener {
+            isGridLayout = !isGridLayout
+            if (isGridLayout){
+                binding.rvUmkmMakanan.layoutManager = GridLayoutManager(requireContext(),2)
+                binding.rvUmkmMakanan.adapter = umkmAdapterMakanan
+
+            }else{
+                binding.rvUmkmMakanan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+                binding.rvUmkmMakanan.adapter = umkmAdapterMakanan
+            }
+        }
+
+        binding.tvKerajinanLihatsemua.setOnClickListener {
+            isGridLayout = !isGridLayout
+            if (isGridLayout){
+                binding.rvUmkmKerajinan.layoutManager = GridLayoutManager(requireContext(),2)
+                binding.rvUmkmKerajinan.adapter = umkmAdapterKerajinan
+
+            }else{
+                binding.rvUmkmKerajinan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+                binding.rvUmkmKerajinan.adapter = umkmAdapterKerajinan
+            }
+        }
+
         binding.rvUmkmMakanan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvUmkmMakanan.adapter = umkmAdapterMakanan
         binding.rvUmkmKerajinan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
