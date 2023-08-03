@@ -1,5 +1,9 @@
 package com.raduldul.rajagaluhkidul.view
 
+import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,8 +40,19 @@ class DetailUmkmFragment : Fragment() {
             binding.tvNamaProduk.text = it.namaProduk
             binding.tvNamaOwner.text = it.namaPemilik
             binding.tvHargaProduk.text = it.harga.toString()
-        }
+            val phoneNumber = it.kontakTelepon
+            binding.btnPesan.setOnClickListener {
+                openWhatsAppWithNumber(requireContext(), phoneNumber)
 
+            }
+        }
+    }
+
+    @SuppressLint("QueryPermissionsNeeded")
+    fun openWhatsAppWithNumber(context: Context, phoneNumber: String) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://api.whatsapp.com/send?phone=$phoneNumber")
+        startActivity(intent)
     }
 
 

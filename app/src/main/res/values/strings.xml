@@ -39,4 +39,8 @@
     <string name="spesialisasi">Spesialisasi</string>
     <string name="pesan">Pesan</string>
     <string name="owner">Owner</string>
+    <string name="wisata">Wisata</string>
+    <string name="lihat_semua">Lihat Semua</string>
+    <string name="budaya">Budaya</string>
+    <string name="masyarakat">Masyarakat</string>
 </resources>

@@ -27,7 +27,7 @@ class UmkmFragment : Fragment() {
     private lateinit var binding: FragmentUmkmBinding
     private val jumlahUmkm = 20
     private var currentUmkm = 0
-    private val jumlahProduk = 60
+    private val jumlahProduk = 20
     private var currentProduk = 0
     private val jumlahJenisUsaha = 2
     private var currentJenisUsaha = 0
@@ -94,7 +94,7 @@ class UmkmFragment : Fragment() {
 
     private fun startCountUpAnimation(textView: TextView, targetValue: Int) {
         val valueAnimator = ValueAnimator.ofInt(0, targetValue)
-        valueAnimator.duration = 5000 // Adjust this value to control the animation speed (milliseconds)
+        valueAnimator.duration = 3000 // Adjust this value to control the animation speed (milliseconds)
 
         valueAnimator.addUpdateListener {
             val animatedValue = it.animatedValue as Int
