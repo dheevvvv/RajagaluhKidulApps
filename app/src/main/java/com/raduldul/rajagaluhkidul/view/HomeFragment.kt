@@ -76,7 +76,7 @@ class HomeFragment : Fragment() {
     private fun setupRecyclerView(){
         binding.rvPopularUmkm.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.rvPopularUmkm.adapter = homeAdapter
-        binding.rvTopRatedWisata.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.rvTopRatedWisata.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL, false )
         binding.rvTopRatedWisata.adapter = topRatedWisataAdapter
     }
 

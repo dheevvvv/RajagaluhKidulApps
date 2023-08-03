@@ -8,7 +8,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.os.bundleOf
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.raduldul.rajagaluhkidul.R
 import com.raduldul.rajagaluhkidul.databinding.FragmentUmkmBinding
+import com.raduldul.rajagaluhkidul.model.umkm.DataPopularUmkm
+import com.raduldul.rajagaluhkidul.model.umkm.DataUmkm
+import com.raduldul.rajagaluhkidul.view.adapter.HomeAdapter
+import com.raduldul.rajagaluhkidul.view.adapter.UmkmAdapter
+import com.raduldul.rajagaluhkidul.viewmodel.HomeViewModel
+import com.raduldul.rajagaluhkidul.viewmodel.UmkmViewModel
 
 
 class UmkmFragment : Fragment() {
@@ -19,6 +31,9 @@ class UmkmFragment : Fragment() {
     private var currentProduk = 0
     private val jumlahJenisUsaha = 2
     private var currentJenisUsaha = 0
+    private val umkmViewModel: UmkmViewModel by activityViewModels()
+    private lateinit var umkmAdapter: UmkmAdapter
+
     @Suppress("UNREACHABLE_CODE")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +56,34 @@ class UmkmFragment : Fragment() {
 //        startCountUpUmkm()
 //        startCountUpProduk()
 //        startCountUpJenisUsaha()
+
+        umkmAdapter = UmkmAdapter{
+            navigateToDetailDestination(it)
+        }
+        setupRecyclerView()
+        observeRecyclerView()
+
+
+
     }
+
+    private fun setupRecyclerView(){
+        binding.rvUmkmMakanan.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.rvUmkmMakanan.adapter = umkmAdapter
+
+    }
+
+    private fun observeRecyclerView() {
+        umkmViewModel.listUmkm.observe(viewLifecycleOwner) {
+            umkmAdapter.setData(it)
+        }
+    }
+
+    private fun navigateToDetailDestination(listData: DataUmkm) {
+        val bundle = bundleOf("listData" to listData)
+        view?.findNavController()?.navigate(R.id.homeFragment, bundle)
+    }
+
     private fun startCountUpAnimation(textView: TextView, targetValue: Int) {
         val valueAnimator = ValueAnimator.ofInt(0, targetValue)
         valueAnimator.duration = 5000 // Adjust this value to control the animation speed (milliseconds)
