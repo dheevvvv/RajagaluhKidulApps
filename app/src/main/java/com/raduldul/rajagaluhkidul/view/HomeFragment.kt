@@ -56,6 +56,9 @@ class HomeFragment : Fragment() {
         binding.ivUmkm.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_umkmFragment)
         }
+        binding.ivWisatabudaya.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_wisataBudayaFragment)
+        }
 
         userViewModel.getUsername()
         userViewModel.username.observe(viewLifecycleOwner){

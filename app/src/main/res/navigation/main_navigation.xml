@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_homeFragment_to_detailUmkmFragment"
             app:destination="@id/detailUmkmFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_wisataBudayaFragment"
+            app:destination="@id/wisataBudayaFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -110,4 +113,21 @@
             android:id="@+id/action_detailUmkmFragment_to_umkmFragment"
             app:destination="@id/umkmFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/wisataBudayaFragment"
+        android:name="com.raduldul.rajagaluhkidul.view.WisataBudayaFragment"
+        android:label="fragment_wisata_budaya"
+        tools:layout="@layout/fragment_wisata_budaya" >
+        <action
+            android:id="@+id/action_wisataBudayaFragment_to_detailWisataBudayaFragment"
+            app:destination="@id/detailWisataBudayaFragment" />
+        <action
+            android:id="@+id/action_wisataBudayaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailWisataBudayaFragment"
+        android:name="com.raduldul.rajagaluhkidul.view.DetailWisataBudayaFragment"
+        android:label="fragment_detail_wisata_budaya"
+        tools:layout="@layout/fragment_detail_wisata_budaya" />
 </navigation>
